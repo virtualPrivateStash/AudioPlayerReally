@@ -23,23 +23,27 @@ public class AudioPlayer_Basic extends QWidget{
 //		QGridLayout layout = new QGridLayout(this);
 		QHBoxLayout layout = new QHBoxLayout(this);
 		
-		QVBoxLayout layoutColPlayButtons = new QVBoxLayout(this);
-		playPause = new QPushButton("playPause");
-		stop = new QPushButton("stop");
-		song_prev = new QPushButton("song_prev");
-		song_next = new QPushButton("song_next");
+		//ADD BUTTONS FOR PLAYBACK
+		QVBoxLayout layoutColPlayButtons = new QVBoxLayout();
+		playPause 	= new QPushButton("playPause");
+		stop 		= new QPushButton("stop");
+		song_prev 	= new QPushButton("song_prev");
+		song_next 	= new QPushButton("song_next");
 		layoutColPlayButtons.addWidget(playPause);
 		layoutColPlayButtons.addWidget(stop);
 		layoutColPlayButtons.addWidget(song_prev);
 		layoutColPlayButtons.addWidget(song_next);
 		
+		//ADD TIME DISPLAY
 //		QHBoxLayout layoutTimeDisplay = new QHBoxLayout();
 		TimeOfSongDisplay timeDisplay = TimeOfSongDisplay.getInstance();
 //		layoutTimeDisplay.addWidget(timeDisplay);
 		
+		//ADD TRACK INFO DISPLAY PANEL
+		
+		//ALL ALL WIDGETS (AND LAYOUTS) TO LAYOUT
 		layout.addLayout(layoutColPlayButtons);
 		layout.addWidget(timeDisplay);
-
 		
 	}
 	
