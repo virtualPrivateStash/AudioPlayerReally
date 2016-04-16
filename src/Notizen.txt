@@ -1,0 +1,46 @@
+================================
+AudioPlayerReally
+================================
+Haupteigenschaften:
+
+ ressourcensparender Audioplayer
+ intuitiv und bedienungsfreundlich
+ customizable layout 
+ customizable keyboard shortcuts
+ playlists speichern können
+ lieder taggen können
+ liedteile (samples) markieren und "speichern" können
+ samples auch tagbar
+ sample-info wird in sowas wie einer metadatei gespeichert
+ 
+  
+================================
+erstmal:
+
+QWidget Player:
+	play/pause
+	stop
+	song_previous
+	song_next
+	back_5sec
+	ahead_5sec
+	
+QWidget Playlist-Area
+	anklickbare Listeneinträge
+	
+QMenu
+	Datei
+		load playlist
+		save playlist
+		exit
+
+
+
+
+================================
+================================
+================================
+================================
+================================
+================================
+================================
