@@ -1,4 +1,4 @@
-package de.dide.audioPlayer.view.gui;
+package de.dide.audioPlayer.view.gui.elements.mainWidgets;
 
 import com.trolltech.qt.gui.QGridLayout;
 import com.trolltech.qt.gui.QHBoxLayout;
@@ -22,6 +22,7 @@ public class AudioPlayer_Basic extends QWidget{
 		super();
 //		QGridLayout layout = new QGridLayout(this);
 		QHBoxLayout layout = new QHBoxLayout(this);
+		
 		QVBoxLayout layoutColPlayButtons = new QVBoxLayout(this);
 		playPause = new QPushButton("playPause");
 		stop = new QPushButton("stop");
@@ -32,14 +33,12 @@ public class AudioPlayer_Basic extends QWidget{
 		layoutColPlayButtons.addWidget(song_prev);
 		layoutColPlayButtons.addWidget(song_next);
 		
-		QHBoxLayout layoutTimeDisplay = new QHBoxLayout();
-		butt1 = new QPushButton("butt1");
-		butt2 = new QPushButton("butt2");
-		layoutTimeDisplay.addWidget(butt1);
-		layoutTimeDisplay.addWidget(butt2);
+//		QHBoxLayout layoutTimeDisplay = new QHBoxLayout();
+		TimeOfSongDisplay timeDisplay = TimeOfSongDisplay.getInstance();
+//		layoutTimeDisplay.addWidget(timeDisplay);
 		
 		layout.addLayout(layoutColPlayButtons);
-		layout.addLayout(layoutTimeDisplay);
+		layout.addWidget(timeDisplay);
 
 		
 	}
