@@ -20,8 +20,6 @@ public class TimeOfSongDisplay extends QLCDNumber{
         timer.start(1000);
         showTime();
         setWindowTitle(tr("Digital Clock"));
-        resize(150, 60);
-
 	}
 	
 	public static TimeOfSongDisplay getInstance() {
