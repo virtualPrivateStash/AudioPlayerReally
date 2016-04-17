@@ -1,5 +1,8 @@
 package de.dide.audioPlayer.app;
 
+import java.io.File;
+
+import com.trolltech.qt.core.QFile;
 import com.trolltech.qt.gui.QApplication;
 import com.trolltech.qt.gui.QGridLayout;
 import com.trolltech.qt.gui.QMainWindow;
@@ -23,9 +26,12 @@ public class AppAudioPlayer extends QMainWindow {
 	private AppAudioPlayer() {
 		setMinimumHeight(800);
 		setMinimumWidth(800);
-		allWidget = new QWidget(this);
+		allWidget = new QWidget();
 		setCentralWidget(allWidget);
-		mainLayout = new QGridLayout(this);
+//		Or alternate way is to use QWidget with parent 0 as a main window, 
+//		and pass the pointer as a parameter to the creation of layout
+//		(or use setLayout(...)) 
+		mainLayout = new QGridLayout();
 		
 		//ADD PLAYER PANEL
 		player = AudioPlayer_Basic.getInstance();
@@ -35,6 +41,8 @@ public class AppAudioPlayer extends QMainWindow {
 		//ADD PLAYLIST PANEL BELOW
 		PlaylistWidget playListPanel = PlaylistWidget.getInstance();
 		playListPanel.setParent(allWidget);
+		
+	
 			/*
 			 * braucht folgendes:
 			 * 
