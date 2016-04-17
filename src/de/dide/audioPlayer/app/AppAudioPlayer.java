@@ -24,8 +24,8 @@ public class AppAudioPlayer extends QMainWindow {
 	private QGridLayout mainLayout;
 	
 	private AppAudioPlayer() {
-		setMinimumHeight(800);
-		setMinimumWidth(800);
+		setMinimumHeight(500);
+		setMinimumWidth(500);
 		allWidget = new QWidget();
 		setCentralWidget(allWidget);
 //		Or alternate way is to use QWidget with parent 0 as a main window, 
