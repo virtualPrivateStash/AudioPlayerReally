@@ -8,6 +8,7 @@ import com.trolltech.qt.gui.QApplication;
 import com.trolltech.qt.gui.QGridLayout;
 import com.trolltech.qt.gui.QHBoxLayout;
 import com.trolltech.qt.gui.QMainWindow;
+import com.trolltech.qt.gui.QPushButton;
 import com.trolltech.qt.gui.QSizePolicy;
 import com.trolltech.qt.gui.QWidget;
 import com.trolltech.qt.gui.QWidgetItem;
@@ -79,10 +80,19 @@ public class AppAudioPlayer extends QMainWindow {
 		//ADD ALL WIDGETS
 		mainLayout.addWidget(player, 0, 0, 1, 1);
 //		mainLayout.addLayout(layout_playList, 10, 0, 1, 2, Qt.AlignmentFlag.AlignCenter);
-		mainLayout.addWidget(playListPanel, 1, 0, 1, -1);
-		mainLayout.setColumnStretch(0, 10000000);
+		mainLayout.addWidget(playListPanel, 1, 0, 1, 1);
+		mainLayout.setColumnStretch(0, 9);
+		mainLayout.setColumnStretch(1, 3);
 		System.out.println("columnStretch 0 post: " + mainLayout.columnStretch(0));
 		System.out.println("columnStretch 1 post: " + mainLayout.columnStretch(1));
+		
+		
+		QPushButton b1 = new QPushButton("1");
+		QPushButton b2 = new QPushButton("2");
+		mainLayout.addWidget(b1, 2, 0);
+		mainLayout.addWidget(b2, 2, 1);
+		
+		
 		
 		allWidget.setLayout(mainLayout);
 	}

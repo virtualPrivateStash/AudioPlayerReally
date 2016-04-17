@@ -51,9 +51,6 @@ public class PlaylistWidget extends QWidget {
 		}
 		QWidget listWidget = new QWidget();
 		listWidget.setLayout(layout);
-		listWidget.setMinimumSize(AppAudioPlayer.SIZE_WIDGET_DEFAULT, AppAudioPlayer.SIZE_WIDGET_DEFAULT);
-		listWidget.setSizePolicy(QSizePolicy.Policy.Expanding, 
-				QSizePolicy.Policy.Expanding);
 		System.out.println("sizeHint von listWidget: " + listWidget.sizeHint());
 		QScrollArea scroller = new QScrollArea(this);
 		scroller.setBackgroundRole(ColorRole.Dark);
